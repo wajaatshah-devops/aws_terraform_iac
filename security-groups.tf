@@ -33,13 +33,6 @@ resource "aws_security_group" "webserver-security-group" {
     protocol = "tcp"
     security_groups = [aws_security_group.my-alb-security-group.id]
   }
-  ingress {
-    description = "SSH Access"
-    from_port = 22
-    to_port = 22
-    protocol = "tcp"
-    security_groups = [aws_security_group.my-alb-security-group.id]
-  }
   egress {
     from_port = 0
     to_port = 0

@@ -33,3 +33,9 @@ variable "ssh_location" {
   type = string
   default = "0.0.0.0/0"
 }
+
+variable "keyName" {
+  description = "Key Name for nginx server ssh access"
+  type = string
+  default = "ssh-key-pair"
+}
